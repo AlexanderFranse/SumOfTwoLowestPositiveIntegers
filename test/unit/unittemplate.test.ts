@@ -9,8 +9,16 @@ describe(`A method is needed to determine the sum of the two lowest positive num
       });
     });
     describe("One integer contains float number. Validation failed", () => {
-      it("[19, 5, 42, 2.0, 77] --> return true", () => {
-        expect(containArrayPositiveIntegers([19, 5, 42, 2.0, 77])).toBe(true);
+      it("[19, 5, 42, 2.0, 77] --> return false", () => {
+        const floatNumber = 3.14;
+        expect(
+          containArrayPositiveIntegers([19, 5, 42, floatNumber, 77])
+        ).toBeFalsy();
+      });
+    });
+    describe("One integer contains 0. Validation failed", () => {
+      it("[19, 5, 42, 2.0, 77] --> return false", () => {
+        expect(containArrayPositiveIntegers([19, 5, 42, 0, 77])).toBeFalsy();
       });
     });
   });
