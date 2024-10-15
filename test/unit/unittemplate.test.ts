@@ -1,4 +1,7 @@
-import { containArrayPositiveIntegers } from "../../src/functions";
+import {
+  containArrayPositiveIntegers,
+  getLowestNumber,
+} from "../../src/functions";
 
 describe(`A method is needed to determine the sum of the two lowest positive numbers given an array of minimum 4 positive integers. 
   No floats or non-positive integers will be passed`, () => {
@@ -17,9 +20,14 @@ describe(`A method is needed to determine the sum of the two lowest positive num
       });
     });
     describe("One integer contains 0. Validation failed", () => {
-      it("[19, 5, 42, 2.0, 77] --> return false", () => {
+      it("[19, 5, 42, 0, 77] --> return false", () => {
         expect(containArrayPositiveIntegers([19, 5, 42, 0, 77])).toBeFalsy();
       });
+    });
+  });
+  describe("Next step after the validation is determine the lowest value that the array contains", () => {
+    it("[19, 5, 42, 2, 77] --> 2", () => {
+      expect(getLowestNumber([19, 5, 42, 2, 77])).toBe(2);
     });
   });
 });

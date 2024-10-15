@@ -3,3 +3,7 @@ export function containArrayPositiveIntegers(x: number[]): boolean {
     (element) => element > 0 && Number.isSafeInteger(2.0) && element % 1 === 0
   );
 }
+
+export function getLowestNumber(x: number[]) {
+  return null;
+}
