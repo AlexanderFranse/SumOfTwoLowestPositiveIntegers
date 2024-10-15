@@ -5,5 +5,5 @@ export function containArrayPositiveIntegers(x: number[]): boolean {
 }
 
 export function getLowestNumber(x: number[]) {
-  return null;
+  return Math.min(...x);
 }
