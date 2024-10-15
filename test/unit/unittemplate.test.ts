@@ -5,7 +5,7 @@ describe(`A method is needed to determine the sum of the two lowest positive num
   describe("To achieve this, validation is needed to see if all integers are positive values", () => {
     describe("All integers are positive. Validation passsed!", () => {
       it("[19, 5, 42, 2, 77] --> return true", () => {
-        expect(validatePositiveIntegers([19, 5, 42, 2, 77])).toBe(true);
+        expect(validatePositiveIntegers([19, 5, 42, 2, 77])).toBeTruthy();
       });
     });
     describe("One integer contains float number. Validation failed", () => {
@@ -22,7 +22,7 @@ describe(`A method is needed to determine the sum of the two lowest positive num
       });
     });
   });
-  describe("Next step after the validation is determine the lowest value that the array contains", () => {
+  describe("Next step after the validation is to determine the lowest value that the array contains", () => {
     it("[19, 5, 42, 2, 77] --> 2", () => {
       expect(getLowestNumber([19, 5, 42, 2, 77])).toBe(2);
     });
