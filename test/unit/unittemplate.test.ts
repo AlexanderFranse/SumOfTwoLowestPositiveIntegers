@@ -26,6 +26,11 @@ describe(`A method is needed to determine the sum of the two lowest positive num
         expect(validatePositiveIntegers([19, 5, 42, 0, 77])).toBeFalsy();
       });
     });
+    describe("One integer contains -42. Validation failed", () => {
+      it("[19, 5, 42, 0, 77] --> return false", () => {
+        expect(validatePositiveIntegers([19, 5, -42, 0, 77])).toBeFalsy();
+      });
+    });
   });
   describe("Next step after the validation is to determine the lowest value that the array contains", () => {
     it("[19, 5, 42, 2, 77] --> 2", () => {
