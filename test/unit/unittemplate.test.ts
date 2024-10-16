@@ -48,5 +48,10 @@ describe(`A method is needed to determine the sum of the two lowest positive num
         7
       );
     });
+    it("[19, 5, -42, 2, 77] --> Error", () => {
+      expect(() => {
+        getSumOfLowestValueAndSecondLowestValue([19, 5, -42, 2, 77]);
+      }).toThrow("Array does not contain only positive");
+    });
   });
 });

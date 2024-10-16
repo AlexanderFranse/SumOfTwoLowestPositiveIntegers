@@ -18,5 +18,8 @@ export function getSecondLowestNumber(x: number[]) {
 }
 
 export function getSumOfLowestValueAndSecondLowestValue(x: number[]) {
+  if (validatePositiveIntegers(x) === false) {
+    throw new Error("Array does not contain only positive");
+  }
   return getLowestNumber(x) + getSecondLowestNumber(x);
 }
