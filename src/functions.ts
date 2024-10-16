@@ -12,3 +12,7 @@ export function validatePositiveIntegers(x: number[]): boolean {
 export function getLowestNumber(x: number[]) {
   return Math.min(...x);
 }
+
+export function getSecondLowestNumber(x: number[]) {
+  return null;
+}

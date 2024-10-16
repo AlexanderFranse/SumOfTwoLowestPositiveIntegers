@@ -1,4 +1,8 @@
-import { validatePositiveIntegers, getLowestNumber } from "../../src/functions";
+import {
+  validatePositiveIntegers,
+  getLowestNumber,
+  getSecondLowestNumber,
+} from "../../src/functions";
 
 describe(`A method is needed to determine the sum of the two lowest positive numbers given an array of minimum 4 positive integers. 
   No floats or non-positive integers will be passed`, () => {
@@ -25,6 +29,11 @@ describe(`A method is needed to determine the sum of the two lowest positive num
   describe("Next step after the validation is to determine the lowest value that the array contains", () => {
     it("[19, 5, 42, 2, 77] --> 2", () => {
       expect(getLowestNumber([19, 5, 42, 2, 77])).toBe(2);
+    });
+  });
+  describe("The second lowest value should be determined as well", () => {
+    it("[19, 5, 42, 2, 77] --> 5", () => {
+      expect(getSecondLowestNumber([19, 5, 42, 2, 77])).toBe(5);
     });
   });
 });
