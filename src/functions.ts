@@ -1,3 +1,5 @@
+import { get } from "http";
+
 export function isIntegerGreaterThanZero(x: number[]): boolean {
   return x.every((element) => element > 0);
 }
@@ -18,5 +20,5 @@ export function getSecondLowestNumber(x: number[]) {
 }
 
 export function getSumOfLowestValueAndSecondLowestValue(x: number[]) {
-  return null;
+  return getLowestNumber(x) + getSecondLowestNumber(x);
 }
