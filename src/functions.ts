@@ -1,5 +1,3 @@
-import { get } from "http";
-
 export function isIntegerGreaterThanZero(x: number[]): boolean {
   return x.every((element) => element > 0);
 }
