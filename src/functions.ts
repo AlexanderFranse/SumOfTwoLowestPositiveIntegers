@@ -14,5 +14,5 @@ export function getLowestNumber(x: number[]) {
 }
 
 export function getSecondLowestNumber(x: number[]) {
-  return null;
+  return x.sort((a, b) => a - b)[1];
 }
